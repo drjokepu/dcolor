@@ -104,7 +104,7 @@ func TestGatherColorBuckets2(t *testing.T) {
 		}
 	}
 
-	for i := l0; i < l0 + l1; i++ {
+	for i := l0; i < l0+l1; i++ {
 		switch i % 4 {
 		case 0:
 			img.Pix[i] = 40
@@ -120,11 +120,11 @@ func TestGatherColorBuckets2(t *testing.T) {
 			break
 		}
 	}
-    
-    assertInt(t, 200, int(img.Pix[0]))
-    assertInt(t, 10, int(img.Pix[1]))
-    assertInt(t, 30, int(img.Pix[2]))
-    assertInt(t, 255, int(img.Pix[3]))
+
+	assertInt(t, 200, int(img.Pix[0]))
+	assertInt(t, 10, int(img.Pix[1]))
+	assertInt(t, 30, int(img.Pix[2]))
+	assertInt(t, 255, int(img.Pix[3]))
 
 	buckets := gatherColorBuckets(img, defaultThreshold)
 	assertInt(t, 2, len(buckets))
