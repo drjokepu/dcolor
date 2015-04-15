@@ -1,4 +1,4 @@
-// Package dcolor finds the dominant colors in images.
+// Package dcolor finds the dominant colors in images. Based on the algorithm discussed at http://stackoverflow.com/a/13675803/8954.
 package dcolor
 
 import (
