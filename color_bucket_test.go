@@ -132,7 +132,7 @@ func TestGatherColorBuckets2(t *testing.T) {
 
 func assertYUVEqual(t *testing.T, c0, c1 color.YCbCr) {
 	if c0.Y != c1.Y || c0.Cb != c1.Cb || c0.Cr != c1.Cr {
-		t.Errorf("Expected: %f, actual: %f", c0, c1)
+		t.Errorf("Expected: %v, actual: %v", c0, c1)
 		t.FailNow()
 	}
 }
