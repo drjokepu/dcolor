@@ -18,7 +18,7 @@ func gatherColorBuckets(img image.Image, threshold float64) colorBucketSlice {
 	x1 := bounds.Max.X
 	y1 := bounds.Max.Y
 
-	var buckets colorBucketSlice = nil
+	var buckets colorBucketSlice
 
 	for y := y0; y < y1; y++ {
 		for x := x0; x < x1; x++ {
@@ -79,9 +79,7 @@ func (b colorBucket) mean() color.YCbCr {
 		return color.YCbCr{Y: 0, Cb: 0, Cr: 0}
 	}
 
-	var tY uint64 = 0
-	var tCb uint64 = 0
-	var tCr uint64 = 0
+	var tY, tCb, tCr uint64
 
 	for _, c := range b {
 		tY += uint64(c.Y)

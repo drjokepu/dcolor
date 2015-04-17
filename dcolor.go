@@ -7,7 +7,7 @@ import (
 	"sort"
 )
 
-// Gets the top n dominant colors in img. The number of colors returned may be less than the number of colors requested.
+// Get the top n dominant colors in img. The number of colors returned may be less than the number of colors requested.
 func Get(img image.Image, n int) []color.Color {
 	buckets := gatherColorBuckets(img, defaultThreshold)
 	sort.Sort(buckets)
