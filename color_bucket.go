@@ -9,7 +9,7 @@ import (
 type colorBucket []color.YCbCr
 type colorBucketSlice []colorBucket
 
-const defaultThreshold = 0.0
+const defaultThreshold = 64.0
 
 func gatherColorBuckets(img image.Image, threshold float64) colorBucketSlice {
 	bounds := img.Bounds()
